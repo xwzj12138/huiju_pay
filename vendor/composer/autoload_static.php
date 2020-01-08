@@ -9,12 +9,22 @@ class ComposerStaticInit5b38e7283a031b80445630760b2fbb7e
     public static $prefixLengthsPsr4 = array (
         'J' => 
         array (
+            'JoinPay\\pay\\trade\\' => 18,
+            'JoinPay\\pay\\payment\\' => 20,
             'JoinPay\\pay\\' => 12,
             'JoinPay\\curl\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'JoinPay\\pay\\trade\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/pay/trade',
+        ),
+        'JoinPay\\pay\\payment\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/pay/payment',
+        ),
         'JoinPay\\pay\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/pay',

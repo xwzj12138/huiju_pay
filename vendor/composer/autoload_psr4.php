@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'JoinPay\\pay\\trade\\' => array($baseDir . '/src/pay/trade'),
+    'JoinPay\\pay\\payment\\' => array($baseDir . '/src/pay/payment'),
     'JoinPay\\pay\\' => array($baseDir . '/src/pay'),
     'JoinPay\\curl\\' => array($baseDir . '/src/curl'),
 );

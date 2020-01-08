@@ -17,7 +17,9 @@
     "autoload": {
         "psr-4": {
             "JoinPay\\curl\\":"src/curl/",
-            "JoinPay\\pay\\":"src/pay/"
+            "JoinPay\\pay\\":"src/pay/",
+            "JoinPay\\pay\\payment\\":"src/pay/payment/",
+            "JoinPay\\pay\\trade\\":"src/pay/trade/"
         }
     }
 }

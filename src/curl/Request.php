@@ -27,16 +27,15 @@ class Request
         curl_setopt($ch, CURLOPT_TIMEOUT, $second);
 
         curl_setopt($ch,CURLOPT_URL, $url);
-        curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
-        //设置header
-        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
         //要求结果为字符串且输出到屏幕上
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        //设置数据类型
-        curl_setopt($ch,CURLOPT_HTTPHEADER,['Content-Type:application/json;charset=utf-8','Accept:application/json']);
+        //post提交方式
+        curl_setopt($ch, CURLOPT_POST, TRUE);
         if($post){
-            //post提交方式
-            curl_setopt($ch, CURLOPT_POST, TRUE);
+            //设置header头
+            curl_setopt($ch,CURLOPT_HTTPHEADER,['Content-Type:application/json;charset=utf-8','Accept:application/json']);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post));
         }
         //运行curl
