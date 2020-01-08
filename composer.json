@@ -1,0 +1,23 @@
+{
+    "name": "xwzj/huiju_pay",
+    "description": "this is huijuzhifu SDK",
+    "keywords": ["joinpay", "huijupay"],
+    "type": "library",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "packer-陈星星",
+            "email": "13246190524@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "JoinPay\\curl\\":"src/curl/",
+            "JoinPay\\pay\\":"src/pay/"
+        }
+    }
+}
