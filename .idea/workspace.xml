@@ -2,26 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df000441-a2e2-4486-9a48-a8011e31c361" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/examples/JoinRefundExample.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/HuijuPayService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/PaymentBase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/SinglePay.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/trade/JoinBase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/join_pay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/join_pay.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pay/payment/AccountBalanceQuery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pay/payment/BatchPay.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pay/payment/BatchPayQuery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/curl/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/curl/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/examples/JoinPayExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinPayExample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/JoinPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/JoinPay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/JoinRefundExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinRefundExample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/SinglePayExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/SinglePayExample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/HuijuPayService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/HuijuPayService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/payment/SinglePay.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/payment/SinglePay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/trade/JoinPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/JoinPay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +33,13 @@
     <session id="-658619461">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -48,7 +47,7 @@
           <entry key="dummy" value="15" />
           <entry key="json" value="94" />
           <entry key="md" value="197" />
-          <entry key="php" value="3835" />
+          <entry key="php" value="5073" />
           <entry key="txt" value="23" />
         </counts>
       </usages-collector>
@@ -56,33 +55,55 @@
         <counts>
           <entry key="JSON" value="94" />
           <entry key="Markdown" value="180" />
-          <entry key="PHP" value="3852" />
+          <entry key="PHP" value="5090" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="12" />
+          <entry key="PHP Class.type" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="6" />
           <entry key="md" value="3" />
-          <entry key="php" value="172" />
+          <entry key="php" value="217" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="6" />
           <entry key="Markdown" value="3" />
-          <entry key="PHP" value="172" />
+          <entry key="PHP" value="217" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="e#6#65#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -91,6 +112,7 @@
       <find>receiverAccountType</find>
       <find>BANK_PAY_COMPOSE_ORDER</find>
       <find>CURLOPT_RETURNTRANSFER</find>
+      <find>firstProductCode</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,24 +131,28 @@
         <option value="$PROJECT_DIR$/src/pay/JoinBase.php" />
         <option value="$PROJECT_DIR$/src/pay/JoinPay.php" />
         <option value="$PROJECT_DIR$/src/pay/SinglePay.php" />
-        <option value="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp04644/data/www/jplife/application/extra/wechat.php" />
-        <option value="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/pay/trade/JoinBase.php" />
-        <option value="$PROJECT_DIR$/src/examples/JoinRefundExample.php" />
-        <option value="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" />
-        <option value="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/pay/payment/PaymentBase.php" />
-        <option value="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" />
-        <option value="$PROJECT_DIR$/src/examples/JoinPayExample.php" />
-        <option value="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" />
-        <option value="$PROJECT_DIR$/src/examples/SinglePayExample.php" />
-        <option value="$PROJECT_DIR$/src/pay/HuijuPayService.php" />
-        <option value="$PROJECT_DIR$/src/pay/trade/JoinPay.php" />
-        <option value="$PROJECT_DIR$/src/pay/payment/SinglePay.php" />
         <option value="$PROJECT_DIR$/src/curl/Request.php" />
+        <option value="$PROJECT_DIR$/src/pay/HuijuPayService.php" />
+        <option value="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" />
+        <option value="$PROJECT_DIR$/src/pay/payment/SinglePay.php" />
+        <option value="$PROJECT_DIR$/src/pay/trade/JoinPay.php" />
+        <option value="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" />
+        <option value="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" />
+        <option value="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" />
+        <option value="$PROJECT_DIR$/src/pay/payment/BatchPay.php" />
+        <option value="$PROJECT_DIR$/src/pay/payment/BatchPayQuery.php" />
+        <option value="$PROJECT_DIR$/src/pay/payment/AccountBalanceQuery.php" />
+        <option value="$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php" />
+        <option value="$PROJECT_DIR$/src/examples/JoinPayExample.php" />
+        <option value="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" />
+        <option value="$PROJECT_DIR$/src/examples/JoinRefundExample.php" />
+        <option value="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" />
+        <option value="$PROJECT_DIR$/src/examples/SinglePayExample.php" />
       </list>
     </option>
   </component>
@@ -156,10 +182,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
-    <option name="y" value="15" />
-    <option name="width" value="2104" />
-    <option name="height" value="1325" />
+    <option name="x" value="269" />
+    <option name="y" value="19" />
+    <option name="width" value="2105" />
+    <option name="height" value="1362" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -224,6 +250,17 @@
               <item name="join_pay" type="b2602c69:ProjectViewProjectNode" />
               <item name="join_pay" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="join_pay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="join_pay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="join_pay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="join_pay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -279,17 +316,21 @@
       <workItem from="1578448142392" duration="7834000" />
       <workItem from="1578461911850" duration="1214000" />
       <workItem from="1578463173714" duration="55000" />
-      <workItem from="1578463238471" duration="15401000" />
+      <workItem from="1578463238471" duration="15419000" />
+      <workItem from="1578537953995" duration="4476000" />
+      <workItem from="1578548884404" duration="5000" />
+      <workItem from="1578548904826" duration="863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29083000" />
+    <option name="totallyTimeSpent" value="34445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="15" width="2104" height="1325" extended-state="0" />
+    <frame x="269" y="19" width="2105" height="1362" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25742576" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21177635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,7 +343,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32985204" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35758108" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3573854" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3294643" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -332,51 +373,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp04644/data/www/jplife/application/extra/wechat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp04644/data/www/jplife/application/extra/wechat.php" />
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/JoinRefundExample.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/JoinQueryOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="34" column="74" lean-forward="true" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
-          <folding>
-            <element signature="e#6#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="e#6#67#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -390,17 +391,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayQueryExample.php">
+    <entry file="file://$PROJECT_DIR$/src/curl/Request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+        <state relative-caret-position="456">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
+    <entry file="file://$PROJECT_DIR$/src/pay/HuijuPayService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="459">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/PaymentBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -408,78 +416,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#63#0#PHP" expanded="true" />
-            <element signature="e#95#127#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php">
+    <entry file="file://$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="780">
+          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/payment/PaymentBase.php">
+    <entry file="file://$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="e#91#123#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="811">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pay/trade/JoinRefund.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="811">
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/SinglePay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pay/trade/JoinPay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="113" column="25" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/BatchPayQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="e#6#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/trade/JoinPay.php">
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/AccountBalanceQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/HuijuPayService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pay/payment/SinglePay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
           <folding>
             <element signature="e#6#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
+    <entry file="file://$PROJECT_DIR$/src/pay/payment/BatchPay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+        <state relative-caret-position="432">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#63#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/curl/Request.php">
+    <entry file="file://$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/JoinQueryOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayQueryExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/JoinRefundExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Notes:单笔代付查询代码
- * Date: 2020/1/8
+ * Notes:账户查询示例代码
+ * Date: 2020/1/9
  * @author: 陈星星
  */
 
@@ -12,6 +12,8 @@ $config = [
     'merchantNo'=>'商户编号'
 ];
 
-$result = (new \JoinPay\pay\payment\SinglePayQuery($config))->query('151651544213541414');
+$result = (new \JoinPay\pay\payment\AccountBalanceQuery($config))->query();
+
 echo $result;
+
 //var_dump(json_decode($result,true));

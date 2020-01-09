@@ -36,6 +36,8 @@ trait HuijuPayService
         {
             if($v != "" && !is_array($v)){
                 $buff[] = $k . "=" . urlencode($v);
+            }else{
+                unset($this->post[$k]);continue;
             }
         }
         return implode('&',$buff);
@@ -44,13 +46,13 @@ trait HuijuPayService
     /**
      * 生成签名
      */
-    protected function sign()
+    protected function sign($post)
     {
         if($this->pm_encryptType==1){
-            return urlencode(md5(implode('',$this->post).$this->partnerkey));
+            return urlencode(md5(implode('',$post).$this->partnerkey));
         }
         $private_key = openssl_pkey_get_private($this->partnerkey);
-        $params = implode("", $this->post);
+        $params = implode("", $post);
         openssl_sign($params, $sign, $private_key, OPENSSL_ALGO_MD5);
         openssl_free_key($private_key);
         return urlencode(base64_encode($sign));

@@ -44,7 +44,7 @@ class JoinRefund extends JoinBase
         if(empty($this->post['p4_RefundAmount'])) throw new PayException('退款金额:p4_RefundAmount不能为空');
         if(empty($this->post['p6_NotifyUrl'])) throw new PayException('服务器异步通知地址:p6_NotifyUrl不能为空');
         //签名
-        $this->post['hmac'] = $this->sign();
+        $this->post['hmac'] = $this->sign($this->post);
         //拼接参数
         $url = $this->url.'?'.$this->ToUrlParams();
         return $this->request($url);

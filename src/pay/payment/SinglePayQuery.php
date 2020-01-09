@@ -31,7 +31,7 @@ class SinglePayQuery extends PaymentBase
         if(empty($orderNo)) throw new PayException('商户订单号不能为空');
         $this->post['merchantOrderNo'] = $orderNo;
         //签名
-        $this->post['hmac'] = $this->sign();
+        $this->post['hmac'] = $this->sign($this->post);
         return $this->request($this->url,$this->post);
     }
 }

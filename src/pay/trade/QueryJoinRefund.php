@@ -34,7 +34,7 @@ class QueryJoinRefund extends JoinBase
         }
         if(empty($this->post['p2_RefundOrderNo'])) throw new PayException('商户退款订单号:p2_RefundOrderNo不能为空');
         //获取签名
-        $this->post['hmac'] = $this->sign();
+        $this->post['hmac'] = $this->sign($this->post);
         //拼接参数
         $url = $this->url.'?'.$this->ToUrlParams();
         return $this->request($url);

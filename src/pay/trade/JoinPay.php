@@ -111,7 +111,7 @@ class JoinPay extends JoinBase
             if($this->post['q5_OpenId']==null)  throw new PayException('微信Openid:q5_OpenId不能为空');
         }
         //签名
-        $this->post['hmac'] = $this->sign();
+        $this->post['hmac'] = $this->sign($this->post);
         //拼接参数
         $url = $this->url.'?'.$this->ToUrlParams();
         return $this->request($url);

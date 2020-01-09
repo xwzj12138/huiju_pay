@@ -31,7 +31,7 @@ class QueryJoinOrder extends JoinBase
         if(empty($orderNo)) throw new PayException('商户订单号不能为空');
         $this->post['p2_OrderNo'] = $orderNo;
         //获取签名
-        $this->post['hmac'] = $this->sign();
+        $this->post['hmac'] = $this->sign($this->post);
         //拼接参数
         $url = $this->url.'?'.$this->ToUrlParams();
         return $this->request($url);
