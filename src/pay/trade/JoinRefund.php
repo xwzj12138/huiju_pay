@@ -46,7 +46,7 @@ class JoinRefund extends JoinBase
         //签名
         $this->post['hmac'] = $this->sign($this->post);
         //拼接参数
-        $url = $this->url.'?'.$this->ToUrlParams();
-        return $this->request($url);
+        $post = $this->ToUrlParams();
+        return $this->request($this->url,$post);
     }
 }
