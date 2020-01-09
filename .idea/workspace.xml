@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df000441-a2e2-4486-9a48-a8011e31c361" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/AccountBalanceQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/BatchPay.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pay/payment/BatchPayQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/JoinPayExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinPayExample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/JoinRefundExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/JoinRefundExample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/SinglePayExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/SinglePayExample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/HuijuPayService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/HuijuPayService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/payment/SinglePay.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/payment/SinglePay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/payment/SinglePayQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/trade/JoinPay.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/JoinPay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/JoinRefund.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pay/trade/QueryJoinRefund.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +30,7 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="json" value="94" />
-          <entry key="md" value="197" />
+          <entry key="md" value="268" />
           <entry key="php" value="5073" />
           <entry key="txt" value="23" />
         </counts>
@@ -54,8 +38,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="94" />
-          <entry key="Markdown" value="180" />
-          <entry key="PHP" value="5090" />
+          <entry key="Markdown" value="249" />
+          <entry key="PHP" value="5092" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
@@ -67,38 +51,41 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="6" />
-          <entry key="md" value="3" />
-          <entry key="php" value="217" />
+          <entry key="md" value="4" />
+          <entry key="php" value="227" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="6" />
-          <entry key="Markdown" value="3" />
-          <entry key="PHP" value="217" />
+          <entry key="Markdown" value="4" />
+          <entry key="PHP" value="227" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#65#0#PHP" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="108">
+                <caret line="4" column="71" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="243">
+              <caret line="9" selection-start-line="9" selection-end-line="18" selection-end-column="38" />
+              <folding>
+                <element signature="e#6#65#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +121,6 @@
         <option value="$USER_HOME$/AppData/Local/Temp/scp04644/data/www/jplife/application/extra/wechat.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/pay/trade/JoinBase.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/pay/payment/PaymentBase.php" />
         <option value="$PROJECT_DIR$/src/curl/Request.php" />
         <option value="$PROJECT_DIR$/src/pay/HuijuPayService.php" />
@@ -150,9 +136,10 @@
         <option value="$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php" />
         <option value="$PROJECT_DIR$/src/examples/JoinPayExample.php" />
         <option value="$PROJECT_DIR$/src/examples/JoinQueryOrder.php" />
-        <option value="$PROJECT_DIR$/src/examples/JoinRefundExample.php" />
         <option value="$PROJECT_DIR$/src/examples/SinglePayQueryExample.php" />
         <option value="$PROJECT_DIR$/src/examples/SinglePayExample.php" />
+        <option value="$PROJECT_DIR$/src/examples/JoinRefundExample.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -261,6 +248,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="join_pay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="join_pay" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pay" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -319,12 +312,12 @@
       <workItem from="1578463238471" duration="15419000" />
       <workItem from="1578537953995" duration="4476000" />
       <workItem from="1578548884404" duration="5000" />
-      <workItem from="1578548904826" duration="863000" />
+      <workItem from="1578548904826" duration="1485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34445000" />
+    <option name="totallyTimeSpent" value="35067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="269" y="19" width="2105" height="1362" extended-state="0" />
@@ -343,7 +336,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32985204" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3573854" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3573854" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3294643" />
       <window_info anchor="bottom" id="找到" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -378,16 +371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="918">
-            <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -491,27 +474,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/JoinQueryOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayQueryExample.php">
+    <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="7" selection-end-line="25" selection-end-column="38" />
           <folding>
             <element signature="e#6#65#0#PHP" expanded="true" />
           </folding>
@@ -520,25 +493,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/JoinRefundExample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="19" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/JoinPayExample.php">
+    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayQueryExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="e#6#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/SinglePayExample.php">
+    <entry file="file://$PROJECT_DIR$/src/examples/AccountBalanceQueryExample.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="e#6#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="4" column="71" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
