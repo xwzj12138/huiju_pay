@@ -32,7 +32,6 @@ class Request
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         //post提交方式
         curl_setopt($ch, CURLOPT_POST, TRUE);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36');
         if(is_array($post)){
             //设置header头
             curl_setopt($ch,CURLOPT_HTTPHEADER,['Content-Type:application/json;charset=utf-8','Accept:application/json']);
