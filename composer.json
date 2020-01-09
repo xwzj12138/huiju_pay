@@ -3,7 +3,7 @@
     "description": "this is huijuzhifu SDK",
     "keywords": ["joinpay", "huijupay"],
     "type": "library",
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "packer-陈星星",
