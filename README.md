@@ -141,6 +141,24 @@ $result = (new JoinPay\pay\payment\BatchPay($config))->payment($post);
 
 ```
 
+## 批量代付查询
+
+```php
+<?php
+//框架使用时可以忽略这一行
+require_once '../../vendor/autoload.php';
+
+$config = [
+    'partnerkey'=>'商户秘钥',
+    'merchantNo'=>'商户编号'
+];
+
+
+$result = (new JoinPay\pay\payment\BatchPayQuery($config))->query('商户批次号');
+//var_dump(json_decode($result,true));
+
+```
+
 ## 账户查询示例代码
 
 ```php

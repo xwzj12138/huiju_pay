@@ -16,8 +16,8 @@ class QueryJoinOrder extends JoinBase
     private $url = 'https://www.joinpay.com/trade/queryOrder.action';
     //请求数据
     protected $post = [
-        'p1_MerchantNo'=>null,
-        'p2_OrderNo'=>null
+        'p1_MerchantNo'=>'',
+        'p2_OrderNo'=>''
     ];
 
     /**

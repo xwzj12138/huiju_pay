@@ -16,23 +16,21 @@ class QueryJoinRefund extends JoinBase
     private $url = 'https://www.joinpay.com/trade/queryRefund.action';
     //请求数据
     protected $post = [
-        'p1_MerchantNo'=>null,
-        'p2_RefundOrderNo'=>null,
-        'p3_Version'=>null
+        'p1_MerchantNo'=>'',
+        'p2_RefundOrderNo'=>'',
+        'p3_Version'=>'2.0'
     ];
 
     /**
      * 查询退款信息
-     * @param $post post[p2_RefundOrderNo] 商户退款订单号
+     * @param $RefundOrderNo 商户退款订单号
      * @return mixed
      * @throws PayException
      */
-    public function query($post)
+    public function query($RefundOrderNo)
     {
-        foreach ($post as $k=>$v) {
-            $this->setAttr($k,$v);
-        }
-        if(empty($this->post['p2_RefundOrderNo'])) throw new PayException('商户退款订单号:p2_RefundOrderNo不能为空');
+        if(empty($RefundOrderNo)) throw new PayException('商户订单号不能为空');
+        $this->post['p2_RefundOrderNo'] = $RefundOrderNo;
         //获取签名
         $this->post['hmac'] = $this->sign($this->post);
         //拼接参数

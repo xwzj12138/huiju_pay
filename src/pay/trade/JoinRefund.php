@@ -16,13 +16,13 @@ class JoinRefund extends JoinBase
     private $url = 'https://www.joinpay.com/trade/refund.action';
     //请求数据
     protected $post = [
-        'p1_MerchantNo'=>null,
-        'p2_OrderNo'=>null,
-        'p3_RefundOrderNo'=>null,
-        'p4_RefundAmount'=>null,
-        'p5_RefundReason'=>null,
-        'p6_NotifyUrl'=>null,
-        'q1_version'=>null
+        'p1_MerchantNo'=>'',
+        'p2_OrderNo'=>'',
+        'p3_RefundOrderNo'=>'',
+        'p4_RefundAmount'=>0,
+        'p5_RefundReason'=>'',
+        'p6_NotifyUrl'=>'',
+        'q1_version'=>''
     ];
 
     /**
