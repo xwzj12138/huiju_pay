@@ -67,14 +67,14 @@ class SinglePay extends PaymentBase
             $this->setAttr($k,$v);
         }
         if($this->post['productCode']==null) throw new PayException('产品类型:productCode不能为空');
-        if($this->post['merchantOrderNo']==null)  throw new PayException('商户订单号:merchantOrderNo不能为空');
-        if($this->post['receiverAccountNoEnc']==null)  throw new PayException('收款账户号:receiverAccountNoEnc不能为空');
-        if($this->post['receiverNameEnc']==null)  throw new PayException('收款人:receiverNameEnc不能为空');
-        if($this->post['receiverAccountType']==null)  throw new PayException('账户类型:receiverAccountType不能为空');
-        if($this->post['receiverBankChannelNo']==null)  throw new PayException('收款账户联行号:receiverBankChannelNo不能为空');
-        if($this->post['paidAmount']==null)  throw new PayException('交易金额:paidAmount不能为空');
-        if($this->post['paidDesc']==null)  throw new PayException('代付说明:paidDesc不能为空');
-        if($this->post['paidUse']==null)  throw new PayException('代付用途:paidUse不能为空');
+        if($this->post['merchantOrderNo']==null) throw new PayException('商户订单号:merchantOrderNo不能为空');
+        if($this->post['receiverAccountNoEnc']==null) throw new PayException('收款账户号:receiverAccountNoEnc不能为空');
+        if($this->post['receiverNameEnc']==null) throw new PayException('收款人:receiverNameEnc不能为空');
+        if($this->post['receiverAccountType']==null) throw new PayException('账户类型:receiverAccountType不能为空');
+        if($this->post['receiverAccountType']==204 && $this->post['receiverBankChannelNo']==null) throw new PayException('收款账户联行号:receiverBankChannelNo不能为空');
+        if($this->post['paidAmount']==null) throw new PayException('交易金额:paidAmount不能为空');
+        if($this->post['paidDesc']==null) throw new PayException('代付说明:paidDesc不能为空');
+        if($this->post['paidUse']==null) throw new PayException('代付用途:paidUse不能为空');
         if($this->post['productCode']=='BANK_PAY_COMPOSE_ORDER' && $this->post['firstProductCode']==null) {
             throw new PayException('优先使用产品:firstProductCode不能为空');
         }
