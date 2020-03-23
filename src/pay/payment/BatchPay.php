@@ -14,29 +14,29 @@ class BatchPay extends PaymentBase
 {
     //请求数据
     protected $post = [
-        'userNo'=>null,
-        'productCode'=>null,
-        'merchantBatchNo'=>null,
-        'requestCount'=>null,
-        'requestAmount'=>null,
-        'requestTime'=>null,
-        'callbackUrl'=>null,
-        'firstProductCode'=>null,
+        'userNo'=>'',
+        'productCode'=>'',
+        'merchantBatchNo'=>'',
+        'requestCount'=>0,
+        'requestAmount'=>0,
+        'requestTime'=>'',
+        'callbackUrl'=>'',
+        'firstProductCode'=>'',
         'details'=>[]
     ];
     //代付明细数据域
     protected $detail = [
-        'userNo'=>null,
-        'merchantOrderNo'=>null,
-        'receiverAccountNoEnc'=>null,
-        'receiverNameEnc'=>null,
-        'receiverAccountType'=>null,
-        'receiverBankChannelNo'=>null,
-        'paidAmount'=>null,
+        'userNo'=>'',
+        'merchantOrderNo'=>'',
+        'receiverAccountNoEnc'=>'',
+        'receiverNameEnc'=>'',
+        'receiverAccountType'=>'',
+        'receiverBankChannelNo'=>'',
+        'paidAmount'=>'',
         'currency'=>'201',
         'isChecked'=>'202',
-        'paidDesc'=>null,
-        'paidUse'=>null
+        'paidDesc'=>'',
+        'paidUse'=>''
     ];
     //请求url
     private $url = 'https://www.joinpay.com/payment/pay/batchPay';
@@ -76,8 +76,11 @@ class BatchPay extends PaymentBase
         foreach ($this->detail as $key=>$item) {
             if(!empty($value[$key])){
                 $post[$key] = $value[$key];
+            }else{
+                $post[$key] = $item;
             }
         }
+        $this->post['requestAmount'] += $post['paidAmount'];
         $this->post['details'][] = $post;
     }
 
@@ -97,8 +100,46 @@ class BatchPay extends PaymentBase
     }
 
     /**
+     * 批量代付生成签名，由于批量代付包含details的字段，需要特殊处理
+     * @param $params
+     * @return string
+     */
+    protected function sign($params)
+    {
+        $details=$params['details'];
+        unset($params['details']);
+        $detailsStr='';
+        foreach ($details as $k=>$value){
+            $detailsStr.= implode("", $value);
+        }
+        if ("1" == $this->pm_encryptType) {
+            return md5(implode("", $params) . $detailsStr . $this->partnerkey);
+        } else {
+            $private_key = openssl_pkey_get_private($this->partnerkey);
+            $params = implode("", $params).$detailsStr;
+            openssl_sign($params, $sign, $private_key, OPENSSL_ALGO_MD5);
+            openssl_free_key($private_key);
+            $sign = base64_encode($sign);
+            return $sign;
+        }
+    }
+
+    /**
      * 代付付款
-     * @param $post
+     * @param $post 参数格式
+     * {productCode:'产品类型',
+     * merchantBatchNo:'商户批次号即支付订单号',
+     * requestAmount:'支付总金额',
+     * firstProductCode:'优先使用产品',
+     * callbackUrl:'回调url',
+     * details:[
+     *      [
+     *          userNo:'商户编号',merchantOrderNo:'商户订单号',receiverAccountNoEnc:'收款账户号',receiverNameEnc:'收款人',
+     *          receiverAccountType:'账户类型',receiverBankChannelNo:'收款账户联行号',paidAmount:'交易金额',currency:'币种,默认人民币',
+     *          isChecked:'是否复核,默认202不复核',paidDesc:'代付说明',paidUse:'代付用途'
+     *      ]
+     *  ]
+     * }
      * @return mixed
      * @throws PayException
      */
@@ -112,16 +153,13 @@ class BatchPay extends PaymentBase
         }
         if($this->post['productCode']==null) throw new PayException('产品类型:productCode不能为空');
         if($this->post['merchantBatchNo']==null)  throw new PayException('商户批次号:merchantBatchNo不能为空');
-        if($this->post['requestAmount']==null)  throw new PayException('请求总金额:requestAmount不能为空');
         if($this->post['productCode']=='BANK_PAY_COMPOSE_ORDER' && $this->post['firstProductCode']==null) {
             throw new PayException('优先使用产品:firstProductCode不能为空');
         }
-        if(empty($this->post['callbackUrl'])) unset($this->post['callbackUrl']);
-        if(empty($this->post['firstProductCode'])) unset($this->post['firstProductCode']);
         $this->post['requestCount'] = count($this->post['details']);
         $this->post['requestTime'] = date('Y-m-d H:i:s');
         //签名
-        $this->post['hmac'] = $this->sign($this->post['details']);
+        $this->post['hmac'] = $this->sign($this->post);
         return $this->request($this->url,$this->post);
     }
 }

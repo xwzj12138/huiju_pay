@@ -16,21 +16,21 @@ class SinglePay extends PaymentBase
     private $url = 'https://www.joinpay.com/payment/pay/singlePay';
     //请求数据
     protected $post = [
-        'userNo'=>null,
-        'productCode'=>null,
-        'requestTime'=>null,
-        'merchantOrderNo'=>null,
-        'receiverAccountNoEnc'=>null,
-        'receiverNameEnc'=>null,
-        'receiverAccountType'=>null,
-        'receiverBankChannelNo'=>null,
-        'paidAmount'=>null,
+        'userNo'=>'',
+        'productCode'=>'',
+        'requestTime'=>'',
+        'merchantOrderNo'=>'',
+        'receiverAccountNoEnc'=>'',
+        'receiverNameEnc'=>'',
+        'receiverAccountType'=>'',
+        'receiverBankChannelNo'=>'',
+        'paidAmount'=>'',
         'currency'=>'201',
         'isChecked'=>'202',
-        'paidDesc'=>null,
-        'paidUse'=>null,
-        'callbackUrl'=>null,
-        'firstProductCode'=>null
+        'paidDesc'=>'',
+        'paidUse'=>'',
+        'callbackUrl'=>'',
+        'firstProductCode'=>''
     ];
 
     /**
@@ -66,20 +66,18 @@ class SinglePay extends PaymentBase
         foreach ($post as $k=>$v) {
             $this->setAttr($k,$v);
         }
-        if($this->post['productCode']==null) throw new PayException('产品类型:productCode不能为空');
-        if($this->post['merchantOrderNo']==null) throw new PayException('商户订单号:merchantOrderNo不能为空');
-        if($this->post['receiverAccountNoEnc']==null) throw new PayException('收款账户号:receiverAccountNoEnc不能为空');
-        if($this->post['receiverNameEnc']==null) throw new PayException('收款人:receiverNameEnc不能为空');
-        if($this->post['receiverAccountType']==null) throw new PayException('账户类型:receiverAccountType不能为空');
+        if($this->post['productCode']=='') throw new PayException('产品类型:productCode不能为空');
+        if($this->post['merchantOrderNo']=='') throw new PayException('商户订单号:merchantOrderNo不能为空');
+        if($this->post['receiverAccountNoEnc']=='') throw new PayException('收款账户号:receiverAccountNoEnc不能为空');
+        if($this->post['receiverNameEnc']=='') throw new PayException('收款人:receiverNameEnc不能为空');
+        if($this->post['receiverAccountType']=='') throw new PayException('账户类型:receiverAccountType不能为空');
         if($this->post['receiverAccountType']==204 && $this->post['receiverBankChannelNo']==null) throw new PayException('收款账户联行号:receiverBankChannelNo不能为空');
-        if($this->post['paidAmount']==null) throw new PayException('交易金额:paidAmount不能为空');
-        if($this->post['paidDesc']==null) throw new PayException('代付说明:paidDesc不能为空');
-        if($this->post['paidUse']==null) throw new PayException('代付用途:paidUse不能为空');
+        if($this->post['paidAmount']=='') throw new PayException('交易金额:paidAmount不能为空');
+        if($this->post['paidDesc']=='') throw new PayException('代付说明:paidDesc不能为空');
+        if($this->post['paidUse']=='') throw new PayException('代付用途:paidUse不能为空');
         if($this->post['productCode']=='BANK_PAY_COMPOSE_ORDER' && $this->post['firstProductCode']==null) {
             throw new PayException('优先使用产品:firstProductCode不能为空');
         }
-        if(empty($this->post['callbackUrl'])) unset($this->post['callbackUrl']);
-        if(empty($this->post['firstProductCode'])) unset($this->post['firstProductCode']);
         $this->post['requestTime'] = date('Y-m-d H:i:s');
         //签名
         $this->post['hmac'] = $this->sign($this->post);

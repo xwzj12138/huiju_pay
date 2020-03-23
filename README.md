@@ -87,34 +87,6 @@ $config = [
     'merchantNo'=>'商户编号'
 ];
 
-$post = [
-    'productCode'=>'产品类型',
-    'merchantOrderNo'=>'商户订单号',
-    'receiverAccountNoEnc'=>'收款账户号',
-    'receiverNameEnc'=>'收款人',
-    'receiverAccountType'=>'账户类型',
-    'receiverBankChannelNo'=>'收款账户联行号',
-    'paidAmount'=>'交易金额',
-    'paidDesc'=>'代付说明',
-    'paidUse'=>'代付用途'
-];
-$result = (new \JoinPay\pay\payment\SinglePay($config))->payment($post);
-echo $result;
-//var_dump(json_decode($result,true));
-
-```
-## 单笔代付示例代码
-
-```php
-<?php
-//框架使用时可以忽略这一行
-require_once '../../vendor/autoload.php';
-
-$config = [
-    'partnerkey'=>'商户秘钥',
-    'merchantNo'=>'商户编号'
-];
-
 $result = (new \JoinPay\pay\payment\SinglePayQuery($config))->query('151651544213541414');
 echo $result;
 //var_dump(json_decode($result,true));
@@ -135,6 +107,36 @@ $config = [
 
 $result = (new \JoinPay\pay\payment\SinglePayQuery($config))->query('151651544213541414');
 echo $result;
+//var_dump(json_decode($result,true));
+
+```
+
+## 批量代付
+
+```php
+<?php
+//框架使用时可以忽略这一行
+require_once '../../vendor/autoload.php';
+
+$config = [
+    'partnerkey'=>'商户秘钥',
+    'merchantNo'=>'商户编号'
+];
+
+$post = [
+    'productCode'=>'BANK_PAY_DAILY_ORDER',
+    'merchantBatchNo'=>'订单号',
+    'details'=>[
+        ['userNo'=>$config['merchantNo'],'merchantOrderNo'=>'订单号','receiverAccountNoEnc'=>'104100000004',
+            'receiverNameEnc'=>'广州佳品接龙网络科技有限公司','receiverAccountType'=>'204','receiverBankChannelNo'=>'104100000004',
+            'paidAmount'=>1,'paidDesc'=>'测试代付','paidUse'=>'202'
+        ],
+        ['userNo'=>$config['merchantNo'],'merchantOrderNo'=>'订单号','receiverAccountNoEnc'=>'6212263602112155759',
+            'receiverNameEnc'=>'陈星星','receiverAccountType'=>'201', 'paidAmount'=>1,'paidDesc'=>'测试代付','paidUse'=>'202'
+        ]
+    ]
+];
+$result = (new JoinPay\pay\payment\BatchPay($config))->payment($post);
 //var_dump(json_decode($result,true));
 
 ```
