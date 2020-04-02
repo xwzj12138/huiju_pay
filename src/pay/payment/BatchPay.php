@@ -156,6 +156,7 @@ class BatchPay extends PaymentBase
         if($this->post['productCode']=='BANK_PAY_COMPOSE_ORDER' && $this->post['firstProductCode']==null) {
             throw new PayException('优先使用产品:firstProductCode不能为空');
         }
+        $this->post['requestAmount'] = (string)$this->post['requestAmount'];
         $this->post['requestCount'] = count($this->post['details']);
         $this->post['requestTime'] = date('Y-m-d H:i:s');
         //签名

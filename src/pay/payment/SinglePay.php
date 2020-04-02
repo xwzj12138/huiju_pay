@@ -79,6 +79,7 @@ class SinglePay extends PaymentBase
             throw new PayException('优先使用产品:firstProductCode不能为空');
         }
         $this->post['requestTime'] = date('Y-m-d H:i:s');
+        $this->post['paidAmount'] = (string)$this->post['paidAmount'];
         //签名
         $this->post['hmac'] = $this->sign($this->post);
         return $this->request($this->url,$this->post);
