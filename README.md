@@ -86,9 +86,19 @@ $config = [
     'partnerkey'=>'商户秘钥',
     'merchantNo'=>'商户编号'
 ];
-
-$result = (new \JoinPay\pay\payment\SinglePayQuery($config))->query('151651544213541414');
-echo $result;
+$post = [
+    'productCode'=>'产品类型',
+    'merchantOrderNo'=>'支付订单号',
+    'receiverAccountNoEnc'=>'收款账户号',
+    'receiverNameEnc'=>'收款人或公司名',
+    'receiverAccountType'=>'账户类型',
+    'receiverBankChannelNo'=>'收款账户联行号，对公必填',
+    'paidAmount'=>'支付金额',
+    'paidDesc'=>'代付说明',
+    'paidUse'=>'代付用途',
+    'firstProductCode'=>'优先使用产品,选填'
+];
+$result = (new JoinPay\pay\payment\SinglePay($config))->payment($post);
 //var_dump(json_decode($result,true));
 
 ```
@@ -124,15 +134,21 @@ $config = [
 ];
 
 $post = [
-    'productCode'=>'BANK_PAY_DAILY_ORDER',
-    'merchantBatchNo'=>'订单号',
+    'productCode'=>'产品类型',
+    'merchantBatchNo'=>'商户批量代付订单号',
+    'callbackUrl'=>'回调url,选填',
+    'firstProductCode'=>'优先使用产品，选填',
     'details'=>[
-        ['userNo'=>$config['merchantNo'],'merchantOrderNo'=>'订单号','receiverAccountNoEnc'=>'104100000004',
-            'receiverNameEnc'=>'广州佳品接龙网络科技有限公司','receiverAccountType'=>'204','receiverBankChannelNo'=>'104100000004',
-            'paidAmount'=>1,'paidDesc'=>'测试代付','paidUse'=>'202'
+        //对公代付
+        ['userNo'=>'商户编号','merchantOrderNo'=>'商户订单号(不能与批量代付及其他代付订单号相同)','receiverAccountNoEnc'=>'收款账户号',
+            'receiverNameEnc'=>'对公收款账户的公司名','receiverAccountType'=>'204','receiverBankChannelNo'=>'收款账户联行号',
+            'paidAmount'=>'交易金额','paidDesc'=>'代付说明','paidUse'=>'代付用途','isChecked'=>'是否复核,默认202不复核',
+            'currency'=>'币种,默认人民币'
         ],
-        ['userNo'=>$config['merchantNo'],'merchantOrderNo'=>'订单号','receiverAccountNoEnc'=>'6212263602112155759',
-            'receiverNameEnc'=>'陈星星','receiverAccountType'=>'201', 'paidAmount'=>1,'paidDesc'=>'测试代付','paidUse'=>'202'
+        //对私代付
+        ['userNo'=>'商户编号','merchantOrderNo'=>'商户订单号(不能与批量代付及其他代付订单号相同)','receiverAccountNoEnc'=>'收款账户号',
+            'receiverNameEnc'=>'收款人','receiverAccountType'=>'201', 'paidAmount'=>'交易金额','paidDesc'=>'代付说明','paidUse'=>'代付用途',
+            'isChecked'=>'是否复核,默认202不复核','currency'=>'币种,默认人民币'
         ]
     ]
 ];
